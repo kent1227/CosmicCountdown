@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameState GameState;
+    public GameState gameState;
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-
         DontDestroyOnLoad(gameObject);
 
     }
@@ -29,7 +28,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateGameState(GameState.Menu);
     }
 
     // Update is called once per frame
@@ -40,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateGameState(GameState state)
     {
-        GameState = state;
+        gameState = state;
 
         switch (state)
         {
@@ -54,8 +53,11 @@ public class GameManager : MonoBehaviour
 
 public enum GameState
 {
+    Menu,
     Start,
+    Pause,
     Flying,
+    Selecting,
     Exploring,
     Victory,
     Defeat

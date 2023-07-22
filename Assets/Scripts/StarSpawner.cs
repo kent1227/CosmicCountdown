@@ -8,7 +8,6 @@ public class StarSpawner : MonoBehaviour
 
     [SerializeField] private Star[] _starPrefabs;
     [SerializeField] private int _spawnAmount;
-    [SerializeField] private bool _usePool;
 
     private ObjectPool<Star> _starPool;
 
@@ -58,7 +57,7 @@ public class StarSpawner : MonoBehaviour
     {
         for (var i=0; i<_spawnAmount; i++)
         {
-            var star = _usePool ? _starPool.Get() : Instantiate(_starPrefabs[0]);
+            var star = _starPool.Get();
             float randomY = Random.Range(-5f, 5f);
             star.transform.position = new Vector2(10, randomY);
             star.Init(KillStar);
