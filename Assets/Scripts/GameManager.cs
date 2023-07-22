@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameState> OnGameStateChanged;
 
+    private Planet planet;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,7 +47,8 @@ public class GameManager : MonoBehaviour
 
         switch (state)
         {
-            case 0:
+            case GameState.Exploring:
+                planet = FindObjectOfType<Planet>();
                 break;
         }
 
