@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public GameState gameState;
 
+    public PlanetCard[] PlanetCards;
+
     public static event Action<GameState> OnGameStateChanged;
 
     private void Awake()

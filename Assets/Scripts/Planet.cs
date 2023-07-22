@@ -6,8 +6,7 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
 
-    public string name;
-    public string description;
+    public string planetName;
     public string sceneName;
 
     public Component[] components;
