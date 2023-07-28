@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         switch (state)
         {
             case GameState.Exploring:
-                planet = FindObjectOfType<Planet>();
+                planet = FindFirstObjectByType<Planet>();
                 break;
         }
 

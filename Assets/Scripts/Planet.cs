@@ -9,8 +9,7 @@ public class Planet : MonoBehaviour
     public string planetName;
     public string sceneName;
 
-    public Component[] components;
-
+    public Collectable[] collectables;
 
     // Start is called before the first frame update
     void Start()
