@@ -7,7 +7,7 @@ public class Collectable : MonoBehaviour
 
     private Player player;
 
-    public CollectableTypes type;
+    public CollectableType type;
 
     // Start is called before the first frame update
     void Start()
@@ -21,18 +21,18 @@ public class Collectable : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             player.AddCollectable(type);
             Destroy(gameObject);
         }
-    }
+    }*/
 
 }
 
-public enum CollectableTypes
+public enum CollectableType
 {
     Fuel,
     Thrusters,
