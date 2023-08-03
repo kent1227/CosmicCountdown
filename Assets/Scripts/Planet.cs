@@ -23,11 +23,3 @@ public class Planet : MonoBehaviour
         
     }
 }
-
-public enum PlanetType
-{
-    Volcanic,
-    Rocky,
-    Lush,
-    Ice
-}

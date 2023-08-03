@@ -15050,7 +15050,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317253232}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
 --- !u!1 &398875639
 GameObject:
   m_ObjectHideFlags: 0
@@ -15186,8 +15185,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.67
-=======
->>>>>>> Stashed changes
 --- !u!1 &419929805
 GameObject:
   m_ObjectHideFlags: 0
@@ -16061,7 +16058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4137cea233633f4c9a92a6266685cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 10
 --- !u!58 &928354204
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19801,3 +19798,4 @@ SceneRoots:
   - {fileID: 1148899473}
   - {fileID: 1317778325}
   - {fileID: 761289891}
+  - {fileID: 398875642}
