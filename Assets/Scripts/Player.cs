@@ -10,16 +10,16 @@ public class Player : MonoBehaviour
 
     //CircleCollider2D cc;
 
-    public Dictionary<CollectableTypes, int> collectables;
+    public Dictionary<CollectableType, int> collectables;
 
     // Start is called before the first frame update
     void Start()
     {
         //cc = GetComponent<CircleCollider2D>();
-        collectables = new Dictionary<CollectableTypes, int>();
-        for (int i=0; i<Enum.GetNames(typeof(CollectableTypes)).Length; i++)
+        collectables = new Dictionary<CollectableType, int>();
+        for (int i=0; i<Enum.GetNames(typeof(CollectableType)).Length; i++)
         {
-            collectables.Add((CollectableTypes)i, 0);
+            collectables.Add((CollectableType)i, 0);
         }
     }
 
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void AddCollectable(CollectableTypes c)
+    public void AddCollectable(CollectableType c)
     {
         int current = collectables[c];
         collectables[c] = current + 1;

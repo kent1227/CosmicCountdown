@@ -13,7 +13,7 @@ public class ProgressBar : MonoBehaviour
 
     Player player;
 
-    public CollectableTypes collectable;
+    public CollectableType collectable;
 
     // Start is called before the first frame update
     void Start()
