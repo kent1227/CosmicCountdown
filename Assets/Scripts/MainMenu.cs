@@ -58,7 +58,11 @@ public class MainMenu : MonoBehaviour
 
     public void OpenPanel(GameObject panel)
     {
+        RectTransform t = panel.GetComponent<RectTransform>();
+        t.localScale = new Vector3(0f, 0.1f, 1f);
         panel.SetActive(true);
+        t.DOScaleX(1.0f, 0.4f).OnComplete(() => t.DOScaleY(1.0f, 0.3f));
+
     }
 
     public void ClosePanel(GameObject panel)
